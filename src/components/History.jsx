@@ -13,7 +13,7 @@ const History = ({ historyObject, history }) => {
   };
 
   return (
-    <Stack margin={2} spacing={0} alignItems="center">
+    <Stack margin={2} alignItems="center">
       <FormControl
         sx={{
           minWidth: "25vw",

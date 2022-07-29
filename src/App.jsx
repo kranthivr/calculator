@@ -154,9 +154,11 @@ function App() {
       <Typography variant="h4" fontFamily="Orbitron" textAlign="center">
         Calculator
       </Typography>
-      <Output result={result ? result : ""} calc={calc || "0"} />
-      <Buttons updateCalc={updateCalc} />
-      <History history={history} />
+      <Stack maxWidth="350px" backgroundColor="#fce4ec" margin="auto">
+        <Output result={result ? result : ""} calc={calc || "0"} />
+        <Buttons updateCalc={updateCalc} />
+        <History history={history} />
+      </Stack>
     </>
   );
 }
