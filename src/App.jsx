@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
@@ -154,11 +154,25 @@ function App() {
       <Typography variant="h4" fontFamily="Orbitron" textAlign="center">
         Calculator
       </Typography>
-      <Stack maxWidth="26.25rem" backgroundColor="#fce4ec" margin="auto">
+      <Stack
+        borderRadius={7}
+        minWidth="22rem"
+        maxWidth="26.25rem"
+        backgroundColor="#fce4ec"
+        margin="auto"
+      >
         <Output result={result ? result : ""} calc={calc || "0"} />
         <Buttons updateCalc={updateCalc} />
         <History history={history} />
       </Stack>
+      <Box display="flex" alignItems="center" justifyContent="center" mt={1}>
+        <Button
+          target="_blank"
+          href="https://github.com/kranthivr/calculator.git"
+        >
+          GIT REPO
+        </Button>
+      </Box>
     </>
   );
 }

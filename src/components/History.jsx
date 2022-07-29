@@ -14,13 +14,12 @@ const History = ({ historyObject, history }) => {
 
   return (
     <Stack margin={2} alignItems="center">
-      <FormControl
-        sx={{
-          minWidth: "25vw",
-        }}
-      >
+      <FormControl>
         <InputLabel id="history-select-label">History</InputLabel>
         <Select
+          sx={{
+            minWidth: "18rem",
+          }}
           labelId="history-select-label"
           id="history-select"
           label="History"
