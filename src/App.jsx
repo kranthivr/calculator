@@ -1,5 +1,6 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
 import { useState } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import "./App.css";
 import Buttons from "./components/Buttons";
 import Output from "./components/Output";
@@ -44,6 +45,9 @@ function App() {
     }
 
     if (value === "change-sign") {
+      if (/[/*-+]/g.test(calc)) {
+        return;
+      }
       if (calc.includes("sqrt")) {
         setCalc((-1 * Number(result)).toString());
         setResult((-1 * Number(result)).toString());
@@ -166,12 +170,12 @@ function App() {
         <History history={history} />
       </Stack>
       <Box display="flex" alignItems="center" justifyContent="center" mt={1}>
-        <Button
+        <Link
           target="_blank"
           href="https://github.com/kranthivr/calculator.git"
         >
-          GIT REPO
-        </Button>
+          <GitHubIcon />
+        </Link>
       </Box>
     </>
   );
